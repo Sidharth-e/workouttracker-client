@@ -1,0 +1,75 @@
+
+.exerciselist_container{
+  padding: 10px 10px;
+}
+.select{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  align-items: center;
+  gap: 2rem;
+}
+.select div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.select label{
+  margin-top: 2rem;
+}
+.select select{
+  border: none;
+  padding: 10px 10px;
+  outline: none;
+  border-radius: 10px;
+}
+.card_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .exercise_card {
+    background-image: linear-gradient(180deg,#3c91e6,#2980b9);
+    border-radius: 10px;
+    box-shadow: inset 20px -2px 10px rgba(0,0,0,.1);
+    color: #fff;
+    padding: 16px;
+  }
+  .exercise_card div{
+    display: flex;
+    flex-direction: column;
+  }
+  .exercise_card div .add{
+    margin-top: 2rem;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+  }
+  .instructions{
+    overflow-y: scroll;
+    height: 10rem;
+    background-color: blue;
+    border-radius: 10px;
+    padding: 10px 10px;
+  }
+  .instructions::-webkit-scrollbar {
+    width: 10px;
+  }
+  .instructions::-webkit-scrollbar-track {
+    background: blue;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+  }
+  .instructions::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 2rem;
+    height: 1px;
+  }
+  @media screen and (max-width:460px) {
+    .select{
+      display:block;
+      margin-bottom: 2rem;
+    }
+  }

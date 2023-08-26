@@ -1,0 +1,31 @@
+/* styles.module.css */
+
+.calorieCalculatorContainer {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calorieCalculatorTitle {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.calorieCalculatorLabel {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.calorieCalculatorInput {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.calorieCalculatorResult {
+  margin-top: 15px;
+  font-size: 18px;
+}

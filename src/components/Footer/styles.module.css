@@ -1,0 +1,31 @@
+/* styles.module.css */
+.footer {
+    background-color: #3C91E6;
+    color: white;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerLogo {
+    display: flex;
+    align-items: center;
+}
+
+.footerLogoText {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.footerText {
+    margin-top: 10px;
+}

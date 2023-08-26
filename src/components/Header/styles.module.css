@@ -1,0 +1,24 @@
+/* styles.module.css */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+    background-color: #3C91E6;
+    padding: 0 20px;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logoIcon {
+    margin-right: 10px;
+}
+
+.logoText {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}

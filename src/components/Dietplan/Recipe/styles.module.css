@@ -1,0 +1,47 @@
+.Recipe_container{
+  background-image: linear-gradient(180deg,#3c91e6,#2980b9);
+  border-radius: 10px;
+  box-shadow: inset 20px -2px 10px rgba(0,0,0,.1);
+  color: #fff;
+  padding: 16px;
+  }
+  .Recipe_container div{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+  }
+  input{
+    border: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+  }
+  .Recipe_search{
+    border: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    
+  }
+  .Recipe_grid_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      gap:20
+    }
+    
+    .Recipe_workout_grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+    }
+    
+    .Recipe_workout_card {
+      border: 1px solid blue;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    

@@ -1,0 +1,26 @@
+.sidebar-toggle{
+    border: none;
+    background: none;
+    padding: 20xp 20px;
+}
+.currency-select{
+    border: none;
+}
+.select{
+    border: none;
+    padding: 10px 10px;
+    background: #eee;
+    border-radius: 8px;
+}
+
+.btn{
+    border: none;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: #3C91E6;
+    color: white;
+    font-weight: 600;
+}
+.logout:hover{
+    color: red;
+}

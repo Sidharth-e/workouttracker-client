@@ -1,0 +1,33 @@
+/* styles.module.css */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .container_top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .Recipe {
+    /* background-color: #f8f8f8; */
+    /* padding: 20px; */
+    margin-top: 2rem;
+
+    border-radius: 5px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (min-width: 468px) {
+    .container_top {
+      flex-direction: row;
+    }
+  
+    .Recipe {
+      margin-top: 5rem;
+    }
+  }
+  
