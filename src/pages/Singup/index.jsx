@@ -17,6 +17,7 @@ const Signup = () => {
     gender: "male",
     healthGoal: "weightloss",
     activityLevel: "sedentary",
+    confirmPassword: "",
   });
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -33,8 +34,13 @@ const Signup = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (data.password !== data.confirmPassword) {
+      setError("Passwords do not match");
+      return;
+    }
     try {
-      await apiService.signup(data);
+      const { confirmPassword, ...postData } = data;
+      await apiService.signup(postData);
       navigate('/login'); // Assuming you're using Gatsby for routing
       console.log('Signup successful');
     } catch (error) {
@@ -167,6 +173,7 @@ const Signup = () => {
               <option value="super_active">Super Active</option>
             </select>
             </div>
+            <div className={styles.input_container}>
             <input
               type="password"
               placeholder="Password"
@@ -177,7 +184,18 @@ const Signup = () => {
               required
               className={styles.input}
             />
+             <input
+          type="password"
+          placeholder="Confirm Password"
+          name="confirmPassword"
+          autoComplete="new-password" // Use 'new-password' for avoiding browser autofill
+          onChange={handleChange}
+          value={data.confirmPassword}
+          required
+          className={styles.input}
+        />
             {error && <div className={styles.error_msg}>{error}</div>}
+            </div>
             <button type="submit" className={styles.green_btn}>
               Sign Up
             </button>
