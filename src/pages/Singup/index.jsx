@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
-import Header from "../Header/Header";
-import apiService from "../API/API";
+import Header from "../../components/Header/Header";
+import apiService from "../../service/API";
 // import Footer from '../Footer/Footer'
 
 const Signup = () => {

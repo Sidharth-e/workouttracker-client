@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from './styles.module.css'
-import apiService from "../../API/API";
+import apiService from '../../../service/API'; 
 
 const CaloriesComponent = () => {
   const [activity, setActivity] = useState("");

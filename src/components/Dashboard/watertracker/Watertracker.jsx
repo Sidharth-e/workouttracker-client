@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.css'
-import apiService from '../../API/API';
+import apiService from '../../../service/API'; 
 
 const WaterTracker = () => {
   const [waterConsumed, setWaterConsumed] = useState(0);

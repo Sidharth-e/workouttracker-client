@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import apiService from '../../API/API';
+import apiService from '../../../service/API'; 
 import styles from './styles.module.css'
 
 const NutritionComponent = () => {

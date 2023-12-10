@@ -1,21 +1,44 @@
-import { Route, Routes, Navigate } from "react-router-dom";
-import Main from "./components/Main";
-import Signup from "./components/Singup";
-import Login from "./components/Login";
-import Admin from "./components/Admin/admin";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import Main from "./pages/Main/index";
+import Signup from "./pages/Singup/index";
+import Login from "./pages/Login/index";
+import Admin from "./pages/Admin/admin";
+import jwt_decode from "jwt-decode";
 
 function App() {
-	const user = localStorage.getItem("token");
+  const user = localStorage.getItem("token");
 
-	return (
-		<Routes>
-			{user && <Route path="/" exact element={<Main />} />}
-			<Route path="/signup" exact element={<Signup />} />
-			<Route path="/login" exact element={<Login />} />
-			<Route path="/" element={<Navigate replace to="/login" />} />
-			{user && <Route path="/admin" exact element={<Admin />} />}
-		</Routes>
-	);
+  return (
+    <Router>
+      <Routes>
+        {/* Always show the Signup and Login routes */}
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+
+        {/* Redirect to /login if the user is not logged in */}
+        {!user && <Route path="/" element={<Navigate to="/login" replace />} />}
+
+        {user && isAdmin(user) ? (
+          <Route path="/" element={<Admin />} />
+        ) : (
+          <Route path="/" element={<Main />} />
+        )}
+      </Routes>
+    </Router>
+  );
+}
+
+function isAdmin(user) {
+  const decodedToken = jwt_decode(user);
+  const role = decodedToken.role;
+
+  return role;
 }
 
 export default App;

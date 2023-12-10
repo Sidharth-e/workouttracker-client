@@ -17,6 +17,7 @@ const apiService = {
     try {
       const { data: res }  = await instance.post('/auth', data);
       localStorage.setItem('token', res.data);
+      console.log(res.data)
     } catch (error) {
       if (error.response && error.response.status >= 400 && error.response.status <= 500) {
         throw new Error(error.response.data.message);
@@ -121,6 +122,23 @@ const apiService = {
       return null;
     }
   },
+  fetchWorkoutsByDate: async (selectedDate) => {
+    const token = getToken();
+  
+    if (!token) {
+      // Handle token not found (user not logged in) scenario here if needed
+      return [];
+    }
+
+    const response = await instance.get(`/workout/${selectedDate}`, {
+      headers: {
+        'x-auth-token': token,
+      },
+    });
+
+    return response.data.workoutPlans;
+  }
+,  
   fetchWorkouts: async () => {
     try {
       const token = getToken();

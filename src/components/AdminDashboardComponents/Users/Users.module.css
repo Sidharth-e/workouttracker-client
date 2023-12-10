@@ -1,0 +1,63 @@
+/* Users.module.css */
+.rwd_table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.rwd_table th,
+.rwd_table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.rwd_table th {
+  background-color: #f2f2f2;
+}
+
+.rwd_table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.rwd_table tr:hover {
+  background-color: #ddd;
+}
+
+.input{
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Edit mode styles */
+.input.edit-mode,
+.input.edit-mode {
+  background-color: #f2f2f2;
+}
+
+/* Button variations */
+.button.secondary {
+  background-color: #ccc;
+  color: #333;
+}
+
+.button.secondary:hover {
+  background-color: #999;
+}

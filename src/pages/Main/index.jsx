@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import Navbar from "./MainDashboard/MainDashboard";
 
 const Main = () => {
   return (

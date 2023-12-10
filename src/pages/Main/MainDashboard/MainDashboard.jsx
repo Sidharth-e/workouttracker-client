@@ -10,9 +10,9 @@ import {
   AiFillBell,
 } from "react-icons/ai";
 import { CgGym } from "react-icons/cg";
-import Workout from "../../workout/workout";
-import Dashboard from "../../Dashboard/Dashboard";
-import Diet from "../../Dietplan/Diet";
+import Workout from "../../../components/workout/workout";
+import Dashboard from "../../../components/Dashboard/Dashboard";
+import Diet from "../../../components/Dietplan/Diet";
 
 // import Settings from "../pages/settings/setting";
 // import Trade from '../pages/trade/trade';
@@ -23,7 +23,6 @@ export default function Navbar() {
   const [search, setSearch] = useState("");
   const [show, setShow] = useState("");
   const [darkMode, setDarkMode] = useState(false);
-  // const [currency, setCurrency] = useState('inr');
   const handleSearch = (event) => {
     setSearch(event.target.value);
   };
@@ -34,9 +33,6 @@ export default function Navbar() {
   const switchPage = (page) => {
     setActivePage(page);
   };
-  // const handleCurrencyChange = (event) => {
-  //   setCurrency(event.target.value);
-  // };
   useEffect(() => {
     const sidebar = document.getElementById("sidebar");
     const searchButton = document.querySelector(
@@ -179,15 +175,6 @@ export default function Navbar() {
               </button>
             </div>
           </form>
-
-          {/* <div className="currency-select">
-        <label>Select Currency:</label>
-        <select className="select" value={currency} onChange={handleCurrencyChange}>
-          <option value="usd">USD</option>
-          <option value="eur">EUR</option>
-          <option value="inr">INR</option>
-        </select>
-      </div> */}
           <input
             type="checkbox"
             id="switch-mode"

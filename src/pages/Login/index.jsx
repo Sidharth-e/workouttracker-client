@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import apiService from "../API/API";
+import Header from "../../components/Header/Header";
+// import Footer from "../../components/Footer/Footer";
+import apiService from "../../service/API";
 
 const Login = () => {
   const [data, setData] = useState({ email: "", password: "" });
@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await apiService.loginUser(data);
-      window.location = "/";
+      window.location ="/";
     } catch (error) {
       setError(error.message);
     }
@@ -67,7 +67,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

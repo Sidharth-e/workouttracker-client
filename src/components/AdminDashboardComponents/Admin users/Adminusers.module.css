@@ -1,0 +1,66 @@
+/* Adminusers.module.css */
+.new_admin_form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  .rwd_table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .rwd_table th,
+  .rwd_table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .rwd_table th {
+    background-color: #f2f2f2;
+  }
+  
+  .rwd_table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .rwd_table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .radio_label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .button.secondary {
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  .button.secondary:hover {
+    background-color: #999;
+  }
+  

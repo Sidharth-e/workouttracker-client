@@ -1,0 +1,71 @@
+/* Addworkout.module.css */
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width as needed */
+  gap: 20px; /* Adjust the gap between grid items */
+}
+
+.gridItem {
+  background-color: #f0f0f0; /* Background color for each grid item */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.gridItem div {
+  margin-bottom: 10px;
+}
+
+/* Optional: Add more styling as needed */
+/* Modal container */
+.modal {
+  position: fixed; /* Use fixed instead of absolute for positioning */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background overlay */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 1; /* Ensure the modal is on top of other content */
+  overflow: auto; /* Enable scrolling if content exceeds viewport */
+}
+
+/* Modal content */
+.modalContent {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  width: 60%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Close button (the "x" in the corner) */
+.closeModal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333; /* Color for the close button */
+}
+
+.closeModal:hover {
+  color: #f00; /* Change color on hover, for example, to red */
+}
+
+/* Style for the selected card data inside the modal */
+.selectedCardData {
+  margin-top: 20px;
+}
+
+/* Additional styles for the card data (customize as needed) */
+.selectedCardData div {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333; /* Text color */
+}

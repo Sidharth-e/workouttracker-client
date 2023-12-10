@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import Loader from "../../Loader/Loader";
-import apiService from "../../API/API";
+import apiService from '../../../service/API'; 
 
 const exerciseTypes = [
   "cardio",
@@ -38,6 +38,8 @@ function ExerciseList() {
   const [exercises, setExercises] = useState([]);
   const [loading, setLoading] = useState(true);
   const [exerciseRepsSets, setExerciseRepsSets] = useState([]);
+  
+  const [selectedDates, setSelectedDates] = useState([]); // State to store selected dates for exercises
 
   const handleRepsChange = (event, exerciseIndex) => {
     const newExerciseRepsSets = [...exerciseRepsSets];
@@ -104,6 +106,7 @@ function ExerciseList() {
       ...exerciseData,
       reps: reps,
       sets: sets,
+      date: selectedDates[exerciseIndex],
     };
     try {
       const message = await apiService.createWorkout(exerciseWithRepsAndSets);
@@ -113,6 +116,12 @@ function ExerciseList() {
       console.error("Error sending exercise data to API:", error);
     }
   };
+  const handleDateChange = (event, exerciseIndex) => {
+    const newSelectedDates = [...selectedDates];
+    newSelectedDates[exerciseIndex] = event.target.value;
+    setSelectedDates(newSelectedDates);
+  };
+
   return (
     <div className={styles.exerciselist_container}>
       <h2>Exercise List</h2>
@@ -202,6 +211,14 @@ function ExerciseList() {
                   onChange={(event) => handleSetsChange(event, index)}
                 />
               </div>
+            </div>
+            <div>
+              <label>Date:</label>
+              <input
+                type="date"
+                value={selectedDates[index] || ""}
+                onChange={(event) => handleDateChange(event, index)}
+              />
             </div>
             <div>
               {" "}

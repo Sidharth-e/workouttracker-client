@@ -26,6 +26,8 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    resize: none;
+    outline: none;
   }
   
   button.add_workout {
